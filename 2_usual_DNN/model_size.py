@@ -86,7 +86,7 @@ def get_model_size(model):
     # compte le nombre de parametres; convertit en taille mémoire
     param_size = 0
     for p in model.parameters():
-        param_size += p.numel() * p.element_size()
+        param_size += p.numel() * p.element_size() #nombre de parametres (W et B) * taille (en octet) d'un parametre
 
     # idem pour les 'buffer', les autres espace mémoire
     # typiquement, pour stockage de moyenne et variance de batch-norm
